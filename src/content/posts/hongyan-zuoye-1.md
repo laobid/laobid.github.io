@@ -1,4 +1,4 @@
----
+﻿---
 title: 红岩作业 1：Linux、环境配置和搭博客
 published: 2026-11-02
 description: 第一次作业记录：在 Linux 上用 vim 写 C 程序、给 Kali 配好 Python / Java / gcc，以及搭这个博客的过程。
@@ -17,21 +17,19 @@ draft: false
 2. `vim` 编辑
 3. `cat` 查看
 
-![cat 查看写好的 4.c：包含 stdio.h、printf 输出 Hello,world](/uploads/hongyan-1-cat.png)
+![cat 查看写好的 4.c：包含 stdio.h、printf 输出 Hello,world](./uploads/hongyan-1-cat.png)
 
 4. 编译并查看
 
-![gcc -Wall 4.c -o 4 编译，./4 运行，输出 Hello,world](/uploads/hongyan-2-gcc.png)
+![gcc -Wall 4.c -o 4 编译，./4 运行，输出 Hello,world](./uploads/hongyan-2-gcc.png)
 
 > 编译和查看是 AI 教的。
-
-写的时候踩的小坑：vim 里要先按 `i` 进入插入模式才能打字，写完按 `Esc` 退出插入模式，再输入 `:wq` 保存退出。第一次用的时候卡在"怎么退出 vim"上，后来才知道是这么回事。
 
 ## 二、给自己的虚拟机配好常用环境（Python、Java、gcc 等）
 
 我的虚拟机是 Kali，环境基本是自带的，所以主要是**确认版本、确认能用**：
 
-![ssh 进 kali 后一次性检查 python3、java、javac、gcc 的版本](/uploads/hongyan-3-env.png)
+![ssh 进 kali 后一次性检查 python3、java、javac、gcc 的版本](./uploads/hongyan-3-env.png)
 
 查出来的结果：
 
@@ -49,14 +47,14 @@ ssh kali "python3 -V; java -version 2>&1 | head -1; javac -version; gcc --versio
 ```
 
 :::note
-`java -version` 的输出是写到标准错误（stderr）的，所以要加 `2>&1` 才能被管道接到，不然 `head` 什么都拿不到。
+`java -version` 的输出是写到标准错误（stderr）的，所以要加 `2>&1` 才能被管道接到，不然 `head` 什么都拿不到。（AI说的)
 :::
 
 ## 三、搭建一个个人博客网站
 
 博客地址：[laobid.github.io](https://laobid.github.io/)
 
-![博客首页截图：蓝紫色横幅、左侧个人资料卡、文章列表](/uploads/hongyan-4-blog.png)
+![博客首页截图：蓝紫色横幅、左侧个人资料卡、文章列表](./uploads/hongyan-4-blog.png)
 
 ::github{repo="laobid/laobid.github.io"}
 
